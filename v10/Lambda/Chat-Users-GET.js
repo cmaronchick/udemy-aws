@@ -6,7 +6,7 @@ var cognito = new AWS.CognitoIdentityServiceProvider();
 
 exports.handler = function (event, context, callback) {
     cognito.listUsers({
-        UserPoolId: '<user pool id>',
+        UserPoolId: 'us-west-2_ApE0MO4rc',
         AttributesToGet: [],
         Filter: '',
         Limit: 60

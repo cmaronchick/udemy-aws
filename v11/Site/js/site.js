@@ -105,7 +105,7 @@ var ChatApp = window.ChatApp || {};
     ChatApp.startChat = function (name) {
         apiClient.conversationsPost({}, [name], {})
             .then(function (result) {
-                window.location = '/chat.html#' + result.data;
+                window.location = 'chat.html#' + result.data;
             });
     };
 

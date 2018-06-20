@@ -41,7 +41,7 @@ var ChatApp = window.ChatApp || {};
                 window.location = '/chats.html';
             },
             onFailure: function (err) {
-                alert(err);
+                alert(JSON.stringify(err));
             }
         });
     };

@@ -138,6 +138,7 @@ var ChatApp = window.ChatApp || {};
         ChatApp.useToken(function (token) {
             apiClient.usersGet({}, null, {headers: {Authorization: token}})
                 .then(function (result) {
+                    var currentUsername = userPool.getCurrentUser().getUsername();
                     result.data.forEach(function (name) {
                         var button = $('<button class="btn btn-primary">Start Chat</button>');
                         button.on('click', function() {
